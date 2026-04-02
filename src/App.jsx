@@ -260,71 +260,39 @@ Return the report with concise fix prompts I can hand back to the coding agent i
 
 const timelineSteps = [
   {
-    id: 'step0',
-    sectionName: 'Vibe Testing',
-    title: "You've adapted to your product. Your users haven't.",
-    body: "Scout tests your product like your users do — and gets sharper every run.",
-    visual: 'vibe',
+    id: 'step-vision',
+    title: "You built something real.\nNow prove it works.",
+    body: "Most buildathon apps never get honest feedback before real users try them. Judges skim. Your users won't.",
   },
   {
-    id: 'step1',
-    sectionName: 'Test Anything',
-    title: 'No set up, no test script, no maintenance',
-    body: 'Stopped testing because testing was hard? Scout makes testing easy.',
-    bullets: [
-      'No test script — Scout navigates your app like a real user',
-      'No maintenance — nothing breaks when your UI changes',
-    ],
-    visual: 'race',
-    alternative: {
-      uspText:
-        'No test scripts. No browser setup. No configuration files.\nJust a URL — and Scout handles the rest.',
-      logos: [
-        { name: 'Playwright', route: '/playwright-compare', src: '/logos/alternatives/playwright.svg' },
-        { name: 'TestSprite', route: '/testsprite-compare', src: '/logos/alternatives/testsprite.png' },
-      ],
-    },
+    id: 'step0',
+    sectionName: 'Powerful Agent',
+    title: "Built by Katalon. Powered by AWS AgentCore.",
+    body: "Scout behaves like a real customer exploring your app — no scripts, no setup. Get sharp feedback now, not after waiting in Replit's queue.",
+    cta: { label: 'Learn more', href: 'https://aws.amazon.com/solutions/case-studies/katalon/' },
+    visual: 'trust',
+  },
+  {
+    id: 'step-criteria',
+    sectionName: 'Buildathon-Ready Feedback',
+    title: "Feedback mapped to\nReplit's judging criteria.",
+    body: 'Replit scores 5,000+ apps — no one gets a real review. Scout audits your product against the actual criteria: clarity, functionality, and market fit. Win or not, you leave with actionable lessons instead of a number on a leaderboard.',
+    visual: 'screenshot',
   },
   {
     id: 'step3',
-    sectionName: 'Discover insight',
-    title: 'Vibe score, quality report in one place.',
-    body: 'Vibe score tells you if your product is ready to ship to your users.',
-    bullets: [
-      'Findings ranked by what customers care about most',
-      'Screenshots and live video to pinpoint exactly what broke',
-      'Plain-English fix suggestions included',
-    ],
-    visual: 'report',
-    alternative: {
-      label: 'SIMILAR TO',
-      uspText:
-        'These tools alert you after a user hit the bug.\nScout finds it before your users arrive — ranked, screenshotted, and ready to fix.',
-      logos: [
-        { name: 'Lighthouse', route: '/lighthouse-compare', src: '/logos/alternatives/lighthouse.svg' },
-      ],
-    },
+    sectionName: 'Quality Signal',
+    title: 'A grade worth sharing.\nProof you shipped something real.',
+    body: "The prize resets. Your portfolio doesn't. A Scout quality badge proves you didn't just build — you built something that works.",
+    cta: { label: 'Get your badge', href: 'https://app.scoutqa.ai' },
+    visual: 'badge-share',
   },
   {
-    id: 'step5',
-    sectionName: 'Accumulated user knowledge',
-    title:
-      'An Agent that learns your product through the eyes\nof every user profile you can imagine',
-    body:
-      'Forget what the product looked like before and after for your users? Let Scout handle it.',
-    visual: 'knowledge',
-  },
-  {
-    id: 'step6',
-    sectionName: 'Always On',
-    title: 'Tests run while you sleep',
-    body: 'Set a schedule or trigger on deploy — Scout checks for side effects before your users do.',
-    bullets: [
-      'Run tests nightly or after every push',
-      'Get alerted the moment something breaks',
-      'No more "I forgot to test after that deploy"',
-    ],
-    visual: 'schedule',
+    id: 'step-momentum',
+    sectionName: 'Keep Building',
+    title: "The buildathon ends.\nYour product doesn't have to.",
+    body: "Most projects die the week after — not because the idea was bad, but because no one tells you what to fix. Scout finds the issues and gives you a ready-to-use fix prompt for each one. Just copy, paste, and keep going.",
+    visual: 'fix-prompt',
   },
   {
     id: 'step4',
@@ -385,29 +353,29 @@ const metrics = [
 
 const faqs = [
   {
-    question: 'How much does it cost?',
+    question: 'Is Scout free to use?',
     answer:
-      'ScoutQA is currently free across all modes. The Pro plan is $15/month and runs on time credits — the more tests you run and the longer each run takes, the more credits you use. Pricing stays transparent so you only pay for what you actually test.',
+      'Completely free. No credit card, no trial, no limits to worry about. Just paste your URL and go.',
   },
   {
-    question: 'How is Scout better than Playwright?',
+    question: 'My app is built with Replit Agent. Can Scout test it?',
     answer:
-      'Playwright requires you to write, maintain, and debug test scripts — that\'s a part-time job. Scout takes a URL and runs autonomously, no code required. You get real findings in minutes, not a test suite to babysit.',
+      'Absolutely. Just paste your deployed Replit app URL and Scout runs immediately — no setup, no scripts, no config. It explores your app the same way a real user would and surfaces what needs fixing.',
   },
   {
-    question: 'How does Scout compare to other AI testing tools?',
+    question: 'What does Scout actually check?',
     answer:
-      'Tools like Testsprite, QA Wolf, Ghost Inspector, Mabl, and Testim all require you to record flows, configure environments, or manage test scripts before you see a single result. Scout skips all of that — no setup, no maintenance, no prior knowledge of your app required. Just paste a URL and Scout autonomously explores your product, surfacing real bugs the way a real user would. That zero-configuration model is what makes Scout fundamentally different.',
+      "Scout tests your app against the criteria judges actually care about: clarity of concept, functionality, design, and user experience. You get a quality grade, ranked findings, and plain-English fix suggestions — not just a score.",
   },
   {
-    question: 'What can Scout test?',
+    question: 'How is this different from just asking a friend to try my app?',
     answer:
-      'Scout tests any web app with a URL — SaaS dashboards, e-commerce checkout flows, landing pages, login and auth flows, onboarding sequences, forms, and staging environments. It catches broken user flows, copy issues, layout bugs, and accessibility violations across the pages and interactions that matter most.',
+      "A friend gives you subjective reactions. Scout gives you structured findings mapped to real quality criteria — ranked by severity, with specific fixes attached. It's honest feedback at scale, available at 2am before your deadline.",
   },
   {
-    question: 'Can Scout test localhost?',
+    question: 'Can I share my Scout report publicly?',
     answer:
-      'Yes. Install the Scout CLI and use the built-in tunnel to expose your local environment — no port forwarding or manual setup needed. Run `scout tunnel` before your test and Scout treats localhost like any other URL.',
+      'Yes. Every Scout report has a shareable link. Post it on LinkedIn, X, or your GitHub README as proof that your app was quality-checked — not just shipped.',
   },
 ]
 
@@ -1011,8 +979,8 @@ function ComparePage({ onNavigateHome, pageData }) {
         <div className="final-cta-card fade-section is-visible">
           <div className="final-copy">
             <h2>
-              <span className="title-line">Vibe testing is</span>
-              <span className="title-line">the new future of builders</span>
+              <span className="title-line">Your app is built.</span>
+              <span className="title-line">Now make sure it works.</span>
             </h2>
           </div>
           <form className="url-form final-form" onSubmit={handleCtaSubmit}>
@@ -1175,8 +1143,8 @@ function HowToRunPage({ onNavigateHome }) {
         <div className="final-cta-card fade-section is-visible">
           <div className="final-copy">
             <h2>
-              <span className="title-line">Vibe testing is</span>
-              <span className="title-line">the new future of builders</span>
+              <span className="title-line">Your app is built.</span>
+              <span className="title-line">Now make sure it works.</span>
             </h2>
           </div>
           <form className="url-form final-form" onSubmit={handleSubmit}>
@@ -1488,6 +1456,41 @@ function StepVisual({ variant }) {
       </div>
     )
   }
+
+  if (variant === 'trust') return (
+    <div className="visual-frame visual-trust">
+      <div className="visual-glow" />
+      <div className="trust-badges">
+        <div className="trust-halo-card">
+          <img src="/logos/katalon-logo.jpg" alt="Katalon" className="trust-logo-img" />
+        </div>
+        <div className="trust-halo-card">
+          <img src="/logos/badges.png" alt="G2 Momentum Leader · AWS Qualified Software · AWS Partner" className="trust-logo-img" />
+        </div>
+      </div>
+    </div>
+  )
+
+  if (variant === 'fix-prompt') return (
+    <div className="visual-frame visual-screenshot">
+      <div className="visual-glow" />
+      <img src="/logos/scout-fix-prompt.png" alt="Scout fix prompt showing how to fix issues" className="screenshot-img" />
+    </div>
+  )
+
+  if (variant === 'badge-share') return (
+    <div className="visual-frame visual-screenshot">
+      <div className="visual-glow" />
+      <img src="/logos/scout-badge-share.png" alt="Scout quality badge shared on Discord" className="screenshot-img" />
+    </div>
+  )
+
+  if (variant === 'screenshot') return (
+    <div className="visual-frame visual-screenshot">
+      <div className="visual-glow" />
+      <img src="/logos/scout-report.png" alt="Scout report showing Replit buildathon criteria feedback" className="screenshot-img" />
+    </div>
+  )
 
   if (variant === 'race') return <RaceVisual />
 
@@ -2033,6 +2036,9 @@ function App() {
       <header className="site-header">
         <button aria-label="Scout homepage" className="brand brand-button" onClick={() => navigateTo('/')} type="button">
           <ScoutWordmark />
+          <span className="brand-x">×</span>
+          <img alt="" className="replit-logo-nav" src="/logos/platforms/replit.svg" />
+          <span className="replit-wordmark-nav">replit</span>
         </button>
         <div className="header-actions">
           <a className="button button-ghost" href="https://app.scoutqa.ai" rel="noreferrer" target="_blank">
@@ -2048,9 +2054,9 @@ function App() {
       <main className="page-shell">
         <section className="hero-section" data-section="hero" ref={setSectionRef('hero')}>
           <div className="hero-copy fade-section">
-            <h1>Ship web app confidently with Vibe Testing</h1>
+            <h1>Is your app actually ready?</h1>
             <div className="hero-subcopy">
-              <p>Paste your URL. Get a real quality report in seconds</p>
+              <p>Get honest feedback before your first real customers hit it.</p>
             </div>
             <form
               className="url-form"
@@ -2099,7 +2105,16 @@ function App() {
                     {index < timelineSteps.length - 1 && <div className="timeline-line" />}
                   </div>
 
-                  {step.id === 'step4' ? (
+                  {step.id === 'step-vision' ? (
+                    <div className="step-vision-centered fade-section">
+                      <h2>
+                        {step.title.split('\n').map((line) => (
+                          <span className="title-line" key={line}>{line}</span>
+                        ))}
+                      </h2>
+                      {step.body && <p className="step-body">{step.body}</p>}
+                    </div>
+                  ) : step.id === 'step4' ? (
                     <>
                       {/* Col 2, Row 1: text header */}
                       <div className="eco-header fade-section">
@@ -2151,6 +2166,11 @@ function App() {
                           ))}
                         </h2>
                         {step.body && <p className="step-body">{step.body}</p>}
+                        {step.cta && (
+                          <a className="step-cta-link" href={step.cta.href} target="_blank" rel="noreferrer">
+                            {step.cta.label} <ArrowRight size={14} />
+                          </a>
+                        )}
                         {step.quote && (
                           <blockquote className="step-quote">"{step.quote}"</blockquote>
                         )}
@@ -2188,20 +2208,6 @@ function App() {
           </div>
         </section>
 
-        <section className="testimonial-section" id="customer-stories">
-          <div className="section-heading fade-section">
-            <h2>Trusted by builders, marketplace and SaaS company</h2>
-            <a className="ghost-link" href="#customer-stories">
-              Read customer stories
-              <ArrowRight size={14} />
-            </a>
-          </div>
-          <div className="testimonial-grid">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.label} {...testimonial} />
-            ))}
-          </div>
-        </section>
 
         <section className="metrics-section" ref={setSectionRef('metrics')}>
           <div className="metrics-card fade-section">
@@ -2228,8 +2234,8 @@ function App() {
             <div className="final-copy">
 
               <h2>
-                <span className="title-line">Vibe testing is</span>
-                <span className="title-line">the new future of builders</span>
+                <span className="title-line">Your app is built.</span>
+                <span className="title-line">Now make sure it works.</span>
               </h2>
             </div>
             <form

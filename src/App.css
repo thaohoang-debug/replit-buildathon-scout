@@ -113,11 +113,41 @@
   border: 0;
   background: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .brand-wordmark {
   width: 100px;
   height: 27px;
+}
+
+.brand-x {
+  font-size: 14px;
+  color: #52525b;
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.replit-logo-nav {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.replit-wordmark-nav {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 27px;
+  color: var(--color-white);
+  letter-spacing: -0.3px;
+  margin-left: 6px;
+}
+
+.hero-trust {
+  font-size: 13px;
+  color: #52525b;
+  margin-top: 4px;
 }
 
 .header-actions {
@@ -1045,6 +1075,24 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+[data-section="step3"] {
+  background:
+    radial-gradient(ellipse at 60% 50%, rgba(23, 169, 119, 0.08) 0%, transparent 65%),
+    linear-gradient(135deg, rgba(23, 169, 119, 0.06) 0%, rgba(10, 10, 10, 0) 60%);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(23, 169, 119, 0.18);
+  padding: 2rem 1.5rem;
+}
+
+[data-section="step-momentum"] {
+  background:
+    radial-gradient(ellipse at 40% 50%, rgba(245, 200, 66, 0.07) 0%, transparent 65%),
+    linear-gradient(135deg, rgba(245, 200, 66, 0.05) 0%, rgba(10, 10, 10, 0) 60%);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(245, 200, 66, 0.15);
+  padding: 2rem 1.5rem;
+}
+
 [data-section="step4"] {
   background:
     radial-gradient(ellipse at 50% 50%, rgba(23, 169, 119, 0.11) 0%, transparent 58%),
@@ -1428,6 +1476,213 @@
   display: grid;
   gap: 1.35rem;
   max-width: 44rem;
+}
+
+/* ── SCREENSHOT VISUAL ── */
+.visual-screenshot {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.screenshot-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ── TRUST VISUAL ── */
+.visual-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.trust-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.trust-badge-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.trust-badge-logo span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.3px;
+}
+
+.trust-katalon span { color: #1C6EF7; }
+.trust-aws span { color: #FF9900; }
+
+.trust-badge-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.trust-badge-sub {
+  font-size: 12px;
+  color: var(--color-white-muted);
+}
+
+.trust-badge-wide {
+  text-align: center;
+}
+
+.trust-halo-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.12), 0 0 80px rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-logo-img {
+  object-fit: contain;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.trust-iso-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.trust-g2-badge {
+  background: white;
+  border-radius: 6px 6px 0 0;
+  padding: 10px 14px;
+  text-align: center;
+  flex: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.trust-g2-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.trust-g2-season {
+  font-size: 8px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+.trust-g2-logo {
+  font-size: 12px;
+  font-weight: 900;
+  color: #FF492C;
+  background: #FF492C;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.trust-g2-title {
+  font-size: 13px;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.trust-g2-bar {
+  height: 4px;
+  background: linear-gradient(to right, #e53e3e, #ed8936, #ecc94b);
+  border-radius: 2px;
+}
+
+.trust-aws-badge {
+  background: white;
+  border: 2px solid #FF9900;
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%);
+}
+
+.trust-aws-badge p {
+  font-size: 11px;
+  font-weight: 700;
+  color: #232F3E;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.step-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-green);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+}
+.step-cta-link:hover { text-decoration: underline; }
+
+.step-vision-centered {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 1.35rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.step-vision-centered h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.step-vision-centered .step-body {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--color-white-secondary);
+  text-wrap: balance;
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+.step-section:has(.step-vision-centered) {
+  grid-template-columns: 1fr;
+}
+
+.step-section:has(.step-vision-centered) .timeline-column {
+  display: none;
 }
 
 .step-copy h2,

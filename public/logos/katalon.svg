@@ -1,0 +1,8 @@
+<svg viewBox="0 0 320 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon shape: large angular quadrilateral -->
+  <polygon points="0,0 42,0 52,58 10,58" fill="white"/>
+  <!-- Teal accent square -->
+  <rect x="10" y="40" width="22" height="20" fill="#17A977"/>
+  <!-- Wordmark: Katalon -->
+  <text x="66" y="54" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="44" fill="white" letter-spacing="-1">Katalon</text>
+</svg>
